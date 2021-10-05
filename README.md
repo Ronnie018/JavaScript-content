@@ -1,2 +1,2 @@
 # JavaScript-content
-My JavaScript Codes will be her
+My JavaScript Codes will be here
