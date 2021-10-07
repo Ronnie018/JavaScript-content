@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #85dddd;
+  min-height: 100vh;
+}
+
+#calc {
+  min-height: 200px;
+  width: 400px;
+  background-color: rgba(14, 143, 157, 0.068);
+  border-radius: 10px;
+  color: white;
+  padding: 10px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.342) 3px 3px 10px;
+          box-shadow: rgba(0, 0, 0, 0.342) 3px 3px 10px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: (1fr)[3];
+      grid-template-rows: repeat(3, 1fr);
+      grid-template-areas: "nome nome" "peso submit" "altura .";
+}
+
+#calc div {
+  margin: 10px;
+}
+
+#calc div input {
+  background-color: rgba(187, 255, 252, 0.507);
+  min-height: 30px;
+  border-radius: 5px;
+}
+
+#calc div input#p-nome {
+  min-width: 100%;
+}
+
+#calc div.nome {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: nome;
+}
+
+#calc div.peso {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: peso;
+}
+
+#calc div.altura {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: altura;
+  margin-bottom: 15px;
+}
+
+#calc div.submit #p-submit {
+  background-color: rgba(187, 255, 252, 0.507);
+  width: 100px;
+  height: 50px;
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: submit;
+  margin-left: 6vw;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(133, 221, 221);
+    min-height: 100vh;
+}
+#calc{
+    min-height: 200px;
+    width: 400px;
+    background-color: rgba(14, 143, 157, 0.068);
+    border-radius: 10px;
+    color: white;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.342) 3px 3px 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+        "nome nome"
+        "peso submit"
+        "altura ."
+    ;
+
+    & div{
+        margin: 10px;
+
+
+
+        & input{
+            background-color: rgba(187, 255, 252, 0.507);
+            min-height: 30px;
+            border-radius: 5px;
+
+            &#p-nome{
+                min-width: 100%;
+            }
+        }
+        &.nome{
+            grid-area: nome;
+        }
+        &.peso{
+            grid-area: peso;
+        }
+        &.altura{
+            grid-area: altura;
+            margin-bottom: 15px;
+        }
+        &.submit{
+            & #p-submit{
+                background-color: rgba(187, 255, 252, 0.507);
+                width: 100px;
+                height: 50px;
+                grid-area: submit;
+                margin-left: 6vw;
+            }
+        }
+    }
+}
