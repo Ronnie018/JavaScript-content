@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="convert" id="convert">
+    <label for="convert">jogue o texto aqui</label>
+    <button id="buttom">clique!</button>
+    <div>
+        <span class="retorno"></span>
+    </div>
+    <script>
+        const botao = document.getElementById("buttom")
+        botao.addEventListener("click", converte)
+
+        function converte(){
+        const caixa = document.getElementById("convert")
+        const retorno = document.getElementsByClassName("retorno")[0]
+        let ret = ""
+            console.log("convertendo");
+            for (c in caixa.value){
+                g = caixa.value[c]
+                console.log(g);
+                if (g !== " "){
+                    ret += g;
+                    console.log(ret);
+                }
+            }
+            retorno.innerText = ret
+        }
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

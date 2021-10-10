@@ -1,0 +1,109 @@
+html {
+  font-size: 62.5%;
+  font-family: 'Inter', sans-serif;
+}
+
+* {
+  animation: 3s ease-in 1s infinite reverse both running;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+body {
+  background-color: cadetblue;
+  overflow-x: hidden;
+}
+
+.main {
+  background-color: #4d5a5b;
+  width: 100vw;
+  height: 100vh;
+}
+
+.main div#dropmenu-open {
+  height: 0px;
+  width: 0px;
+}
+
+.main div#dropmenu-open.opened {
+  width: 22vw;
+  height: 80vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+      grid-template-areas: "buttom";
+  background-image: url(https://images.ctfassets.net/hrltx12pl8hq/1fR5Y7KaK9puRmCDaIof7j/09e2b2b9eaf42d450aba695056793607/vector1.jpg?fit=fill&w=800&h=300);
+  background-size: 125%;
+  background-color: #255a5c;
+  mix-blend-mode: overlay;
+  background-repeat: no-repeat;
+  animation: 3s ease-in 1s infinite reverse both running;
+  -webkit-transition: .1s;
+  transition: .1s;
+}
+
+.main div#dropmenu-open.opened a {
+  background-color: cadetblue;
+  display: inherit;
+}
+
+.main div#dropmenu-open.opened a #dropmenu {
+  background-color: green;
+}
+
+.main div#dropmenu-open #dropmenu {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: buttom;
+  height: 50px;
+  width: 50px;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#2a4d97), to(#4866a7));
+  background-image: linear-gradient(#2a4d97, #4866a7);
+}
+
+.main div#dropmenu-open #dropmenu:hover {
+  height: 55px;
+  width: 55px;
+}
+
+.main div#dropmenu-open #dropmenu:active {
+  height: 48px;
+  width: 48px;
+  background-color: #184097;
+  border-radius: 5px;
+}
+
+.main div#dropmenu-open a {
+  background-color: cadetblue;
+  display: none;
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: black;
+  font-weight: 200;
+  text-indent: 10px;
+  outline: solid 1px black;
+}
+
+.main div#dropmenu-open a:hover {
+  background-color: #3e9294;
+  padding: 3px;
+  -webkit-box-shadow: 0px -2px 0px 1px rgba(31, 102, 104, 0.783) inset;
+          box-shadow: 0px -2px 0px 1px rgba(31, 102, 104, 0.783) inset;
+}
+
+.main div#dropmenu-open a:active {
+  background-color: #50989b;
+  padding: 3.01px;
+  -webkit-box-shadow: 0px 1px 0px 1px rgba(52, 122, 125, 0.783) inset;
+          box-shadow: 0px 1px 0px 1px rgba(52, 122, 125, 0.783) inset;
+}
+
+footer p {
+  font-size: 1.6rem;
+}
+/*# sourceMappingURL=styles.css.map */

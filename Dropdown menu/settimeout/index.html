@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Time Out</title>
+    <script src="./script.js" defer></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: white;
+        }
+        html{
+            font-size: 62.5%;
+        }
+        h1, h2, h3, h4, h5, h6{
+            font-size: 1.6rem;
+        }
+        button{
+            min-width: 20px;
+            min-height: 20px;
+        }
+        #obj{
+            background-color: rgb(106, 106, 106);
+            height: 50px;
+            width: 50px;
+            position: absolute;
+            transform-origin: center;
+            transform: rotate(45deg);
+            transition: .5s;
+            top: 250px;
+            left: 150px;
+        }
+        #obj:hover{
+            height: 60px;
+            width: 60px;
+        }
+    </style>
+</head>
+<body id="background">
+    <header>
+        <h1>objetivo</h1>
+        <p></p>
+    </header>
+    <main>
+        <div id="obj"></div>
+        <button id="start">start</button>
+        <button id="stop">stop</button>
+    </main>
+    <aside>
+        <h1>solucoes</h1>
+    </aside>
+</body>
+</html>

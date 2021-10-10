@@ -1,0 +1,105 @@
+@charset "UTF-8";
+
+html{
+    font-size: 62.5%;
+    font-family: 'Inter', sans-serif;
+}
+*{
+    animation: 3s ease-in 1s infinite reverse both running;
+    transition: .2s;
+}body{
+    background-color: cadetblue;
+    overflow-x: hidden;
+}
+.main{
+    background-color: rgb(77, 90, 91);
+    width: 100vw;
+    height: 100vh;
+}
+.main div{
+
+    &#dropmenu-open{
+        height: 0px;
+        width: 0px;
+
+        &.opened{
+            width: 22vw;
+            height: 80vh;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            grid-template-areas: 
+            "buttom";
+            background-image: url(https://images.ctfassets.net/hrltx12pl8hq/1fR5Y7KaK9puRmCDaIof7j/09e2b2b9eaf42d450aba695056793607/vector1.jpg?fit=fill&w=800&h=300);
+            background-size: 125%;
+            background-color: rgb(37, 90, 92);
+            mix-blend-mode: overlay;
+            background-repeat: no-repeat;
+            animation: 3s ease-in 1s infinite reverse both running;
+            transition: .1s;
+
+            
+            & a{
+                background-color: cadetblue;
+                display: inherit;
+
+            & #dropmenu{
+                background-color: green;
+            }
+        }
+        }
+
+        #dropmenu{
+            grid-area: buttom;
+            height: 50px;
+            width: 50px;
+            transform-origin: center;
+            background-image: linear-gradient(rgb(42, 77, 151), rgb(72, 102, 167));
+
+            &:hover{
+                height: 55px;
+                width: 55px;
+            }
+            &:active{
+                height: 48px;
+                width: 48px;
+                background-color: rgb(24, 64, 151);
+                border-radius: 5px;
+            }
+        }
+
+        & a{
+            background-color: cadetblue;
+            display: none;
+            font-size: 1.8rem;
+            text-decoration: none;
+            color: black;
+            font-weight: 200;
+            text-indent: 10px;
+            outline:solid 1px black;
+
+
+            &:hover{
+                background-color: rgb(62, 146, 148);
+                padding: 3px;
+                box-shadow: 0px -2px 0px 1px rgba(31, 102, 104, 0.783) inset;
+            }
+            &:active{
+                background-color: rgb(80, 152, 155);
+                padding: 3.01px;
+                box-shadow: 0px 1px 0px 1px rgba(52, 122, 125, 0.783) inset;
+            }
+        }
+
+    }
+}
+
+
+
+
+
+
+
+footer p{
+    font-size: 1.6rem;
+}
