@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursivity</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(70, 70, 70);
+        }
+        table, table *{
+            background-color: rgb(128, 128, 128);
+            border: black solid 1px;
+            border-collapse: collapse;
+            padding: 5px 10px;
+        }
+        table *:hover{
+            background-color: rgb(167, 167, 167);
+        }
+    </style>
+    <script src="./script.js" defer></script>
+    
+</head>
+<body>
+    <table id="table">
+        <tr>
+            <th>Alunos</th>
+            <th>Nota1</th>
+            <th>Nota2</th>
+            <th id="totals">Total</th>
+        </tr>
+        <tr>
+            <td>Aluno 1</td>
+            <td>35</td>
+            <td>48</td>
+            <td id="totals"></td>
+        </tr>
+        <tr>
+            <td>aluno2</td>
+            <td>20</td>
+            <td>15</td>
+            <td id="totals"></td>
+        </tr>
+        <tr>
+            <td>aluno3</td>
+            <td>48</td>
+            <td>48</td>
+            <td id="totals"></td>
+        </tr>
+        <tr>
+            <td>Aluno4</td>
+            <td>10</td>
+            <td>50</td>
+            <td>60</td>
+        </tr>
+    </table>
+</body>
+</html>
