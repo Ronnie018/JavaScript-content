@@ -1,42 +1,33 @@
 let images;
-let quantidade;
-let slider;
 let actual;
-_init()
-
-
+let max;
+let slider;
 
 function _init(){
-    console.log("inicializado...");
-    quantidade = 4
-    console.log("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
-    load()
-    slider = document.getElementById("slider")
-    actual = 0
-    console.log("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
-    setInterval(setImage, 3000)
+    max = 4;
+    actual = 1;
+    load();
+    put();
 }
-
 function load(){
-    console.log("carregando dependências...");
-    images = []
-
-    for (c = 0; c < quantidade; c++){
-        let image = `./Images/img${c}.png`
-        images[c] = image
-        console.log("image", image);
-        console.log("carregando imagens...", images[c]);
-
+    console.log("loading images...");
+    images = [];
+    for (c=0;c<max;c++){
+        image = new Image();
+        image = `images/img${c}.png`;
+        images[c] = image;
     }
-    console.log("imagens carregadas: ", images);
-    }
-    
-function setImage(){
-    if(actual > images.length-1){
-        actual = 0
-    }
-    console.log("atribuindo imagem: ", images[actual], "á", slider)
-    slider.style.backgroundImage = `url(${images[actual]})`
-    console.log("imagem atribuida.");
-    actual++
 }
+function put(){
+    console.log("setting");
+    slider = document.getElementById("slider");
+    setInterval(setimage, 2000);
+}
+function setimage(){
+    if (actual >= max){
+        actual = 0;
+    }
+    slider.style.backgroundImage = `url(${images[actual]})`;
+    actual ++;
+}
+_init();
