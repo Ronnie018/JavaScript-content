@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./script.js" defer></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+        body{
+            display: grid;
+            place-items: center;
+            height: 100vh;
+            background-color: grey;
+        }
+        main{
+            position: relative;
+            overflow-x: scroll;
+            height: fit-content;
+            width: 500px;
+            scroll-snap-type: x mandatory;
+        }
+        #slider{
+            display: flex;
+
+        }
+        ::-webkit-scrollbar{
+            background-color: transparent;
+        }
+        ::-webkit-scrollbar-thumb{
+            background-color: rgb(0, 98, 128);
+        }
+        .item{
+            scroll-snap-align: start;
+        }
+        #buttons div{
+            height: 17px;
+            width: 125px;
+        }
+        #buttons{
+            background-color: rgb(144, 224, 238);
+            position: absolute;
+            width: 500px;
+            bottom: 0;
+            z-index: 0;
+            display: flex;
+        }
+        .container{
+            height: fit-content;
+            width: 500px;
+            position: relative;
+        }
+        
+        #one{
+            background-color: #67bee056;
+        }
+        #two{
+            background-color: #28afc741;
+        }
+        #three{
+            background-color: #1e74943a;
+        }
+        #four{
+            background-color: #0e474741;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <main id="el-padre">
+            <div id="slider">
+                <div class="item"><img src="../Images/img0.png"></div>
+                <div class="item"><img src="../Images/img1.png"></div>
+                <div class="item"><img src="../images/img2.png"></div>
+                <div class="item" id="last"><img src="../Images/img3.png"></div>
+            </div>
+        </main>
+        <div id="buttons">
+            <div id="one"></div>
+            <div id="two"></div>
+            <div id="three"></div>
+            <div id="four"></div>
+        </div>
+    </div>
+</body>
+</html>
